@@ -7,6 +7,7 @@ import requests
 # import pymarc
 
 #========== FUNCTIONS ========== 
+# a function to search WorldCat for books
 def process_books(row):
     ''' (str,str) -> str
     take a list of authors and a publication title, output a worldcat search opensearch query with combined authors and title
@@ -26,11 +27,12 @@ def process_books(row):
     print(query_string)
     ######################
 
-
+# a function to search for DOIs for article
 def process_articles(row):
     pub_title = row['name']
    # print(pub_title,'is an article')
 
+#a function to handle what's left, hopefully
 def process_other(row):
     pub_title = row['name']
    # print(pub_title,' is something else')
