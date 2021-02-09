@@ -59,6 +59,7 @@ limit = 9000
 for ID, row in full_data.iterrows():
     if row["ID"] == limit:
         break
+
     pub_type = int(row["pub_type"])
     # get publication date as a string
     pub_date = str(row["year"])
